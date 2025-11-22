@@ -6,8 +6,103 @@
   <title>Filler Quest</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-  <!-- BaseApp MiniApp Embed Metadata -->
-  <meta name="fc:miniapp" content='{"version":"next","imageUrl":"https://filler-base.vercel.app/images/color.png","button":{"title":"Play Now","action":{"type":"launch_miniapp","name":"Filler Quest","url":"https://filler-base.vercel.app/"}}}' />
+<body>
+  <!-- LANDING PAGE - Shows when game first loads -->
+  <div id="landingPage" class="landing-page">
+    <div class="landing-content">
+      <div class="landing-header">
+        <h1 class="landing-title">
+          <span class="title-word">Filler</span>
+          <span class="title-word">Quest</span>
+        </h1>
+        <p class="landing-tagline">Master the Art of Color Strategy</p>
+      </div>
+
+      <div class="landing-features">
+        <div class="feature">
+          <div class="feature-icon">🎯</div>
+          <h3>Strategic Gameplay</h3>
+          <p>Fill the entire board using smart color choices</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🏆</div>
+          <h3>Progressive Levels</h3>
+          <p>Boards get bigger and more challenging</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🎨</div>
+          <h3>Beautiful Themes</h3>
+          <p>Light, Dark, and Colorful modes</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🎵</div>
+          <h3>Immersive Sound</h3>
+          <p>Enjoy background music and effects</p>
+        </div>
+      </div>
+
+      <button id="startGameBtn" class="start-game-btn">
+        <span>Start Playing</span>
+        <span class="btn-arrow">→</span>
+      </button>
+
+      <div class="landing-footer">
+        <p>Use fewer moves to earn more points!</p>
+      </div>
+    </div>
+    
+    <div class="landing-shapes" aria-hidden="true">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+      <div class="shape shape-4"></div>
+    </div>
+  </div>
+  
+  <button id="drawerToggle" class="drawer-toggle" aria-expanded="false" aria-label="Open controls">⚙️</button>
+  <aside id="drawer" class="drawer" aria-hidden="true">
+    <div class="drawer-header">
+      <h2>Game Controls</h2>
+      <button id="drawerClose" class="icon-btn ghost-icon" aria-label="Close controls">✕</button>
+    </div>
+    <div class="drawer-section">
+      <p class="drawer-label">Summary</p>
+      <p>Level <span id="drawerLevel">1</span></p>
+      <p>Points <span id="drawerPoints">0</span></p>
+    </div>
+    <div class="drawer-section">
+      <p class="drawer-label">Preferences</p>
+      <button id="soundToggle" class="icon-btn" aria-pressed="false">🔊 Sound</button>
+      <label class="theme-select">
+        Theme
+        <select id="themeSelect" aria-label="Choose theme">
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+          <option value="colorful">Colorful</option>
+        </select>
+      </label>
+    </div>
+    <div class="drawer-section">
+      <p class="drawer-label">Actions</p>
+      <button id="resetBtn" class="reset-btn full">Restart Level</button>
+      <button id="newGameBtn" class="ghost-btn full">New Game (reset points)</button>
+    </div>
+  </aside>
+  <div id="drawerBackdrop" class="drawer-backdrop hidden" aria-hidden="true"></div>
+  <div class="app">
+    <header>
+      <h1>Filler Quest</h1>
+      <p class="subtitle">Fill each board before the moves run out.</p>
+    </header>
+
+    <section class="stats">
+      <div class="chip">
+        Level <span id="levelDisplay">1</span>
+      </div>
+      <div class="chip">
+        Moves <span id="moveCount">0</span>/<span id="moveLimit">0</span>
+      </div>
+      <div class="chip">
         Points <span id="pointsTotal">0</span>
       </div>
     </section>
