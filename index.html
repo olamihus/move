@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Filler Quest</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+  <!-- BaseApp MiniApp Embed Metadata -->
+  <meta name="fc:miniapp" content='{"version":"next","imageUrl":"https://filler-base.vercel.app/images/color.png","button":{"title":"Play Now","action":{"type":"launch_miniapp","name":"Filler Quest","url":"https://filler-base.vercel.app/"}}}' />
+        Points <span id="pointsTotal">0</span>
+      </div>
+    </section>
+
+    <section class="board-wrapper">
+      <div id="board" class="board" aria-label="Filler board"></div>
+    </section>
+
+    <section class="controls">
+      <div id="colorButtons" class="color-buttons"></div>
+    </section>
+  </div>
+
+  <div id="levelOverlay" class="overlay hidden">
+    <div class="overlay-card">
+      <h2 id="overlayTitle"></h2>
+      <p id="overlayMessage"></p>
+      <button id="overlayBtn">Continue</button>
+    </div>
+  </div>
+
+  <div id="tutorial" class="tutorial hidden">
+    <div class="tutorial-card">
+      <h3>How to Play</h3>
+      <p id="tutorialText"></p>
+      <div class="tutorial-actions">
+        <button id="tutorialBtn">Got it</button>
+        <button id="skipTutorialBtn" class="ghost-btn">Skip Tutorial</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="particles" aria-hidden="true"></div>
+  <audio id="bgMusic" src="me.mp3" preload="auto"></audio>
+  <audio id="moveSound" src="https://cdn.jsdelivr.net/gh/itsrealfake/audio-snippets/click-soft.mp3" preload="auto"></audio>
+  <audio id="fillSound" src="https://cdn.jsdelivr.net/gh/itsrealfake/audio-snippets/pop-soft.mp3" preload="auto"></audio>
+  <audio id="loseSound" src="https://cdn.jsdelivr.net/gh/itsrealfake/audio-snippets/error-tone.mp3" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
