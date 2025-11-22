@@ -557,3 +557,19 @@ window.addEventListener("click", function enableBG() {
 
   window.addEventListener("DOMContentLoaded", init);
 })();
+
+// Simple Farcaster Frame Integration (like the video)
+const initFrame = () => {
+  try {
+    FarcasterFrameSdk.actions.ready();
+    console.log('Farcaster Frame ready');
+  } catch (error) {
+    console.log('Frame SDK not available');
+  }
+};
+
+// Update the DOMContentLoaded event
+window.addEventListener("DOMContentLoaded", () => {
+  init();
+  initFrame(); // Initialize Farcaster frame
+});
