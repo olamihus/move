@@ -3,62 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Base Mini App Tags -->
+  <meta name="mini-app" content="embed-sdk-v1">
+  <meta name="ethereum-domain-verification" content="domainbaseorg">
+  <!-- Farcaster Mini App Meta Tag -->
+  <meta 
+    name="fc:miniapp" 
+    content='{
+      "version": "next",
+      "imageUrl": "https://raw.githubusercontent.com/olamihus/new/main/color.png",
+      "button": {
+        "title": "Play Filler Quest",
+        "action": {
+          "type": "launch_frame",
+          "url": "https://new-6hyl.vercel.app/"
+        }
+      }
+    }'
+  />
+  
+  <!-- Social Media Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:title" content="Filler Quest">
+  <meta property="og:description" content="Fill each board before the moves run out. A colorful puzzle game!">
+  <meta property="og:image" content="https://raw.githubusercontent.com/olamihus/new/main/color.png">
+  <meta property="og:type" content="website">
   <title>Filler Quest</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json">
 </head>
 <body>
-  <!-- LANDING PAGE - Shows when game first loads -->
-  <div id="landingPage" class="landing-page">
-    <div class="landing-content">
-      <div class="landing-header">
-        <h1 class="landing-title">
-          <span class="title-word">Filler</span>
-          <span class="title-word">Quest</span>
-        </h1>
-        <p class="landing-tagline">Master the Art of Color Strategy</p>
-      </div>
-
-      <div class="landing-features">
-        <div class="feature">
-          <div class="feature-icon">🎯</div>
-          <h3>Strategic Gameplay</h3>
-          <p>Fill the entire board using smart color choices</p>
-        </div>
-        <div class="feature">
-          <div class="feature-icon">🏆</div>
-          <h3>Progressive Levels</h3>
-          <p>Boards get bigger and more challenging</p>
-        </div>
-        <div class="feature">
-          <div class="feature-icon">🎨</div>
-          <h3>Beautiful Themes</h3>
-          <p>Light, Dark, and Colorful modes</p>
-        </div>
-        <div class="feature">
-          <div class="feature-icon">🎵</div>
-          <h3>Immersive Sound</h3>
-          <p>Enjoy background music and effects</p>
-        </div>
-      </div>
-
-      <button id="startGameBtn" class="start-game-btn">
-        <span>Start Playing</span>
-        <span class="btn-arrow">→</span>
-      </button>
-
-      <div class="landing-footer">
-        <p>Use fewer moves to earn more points!</p>
-      </div>
-    </div>
-    
-    <div class="landing-shapes" aria-hidden="true">
-      <div class="shape shape-1"></div>
-      <div class="shape shape-2"></div>
-      <div class="shape shape-3"></div>
-      <div class="shape shape-4"></div>
-    </div>
-  </div>
-  
   <button id="drawerToggle" class="drawer-toggle" aria-expanded="false" aria-label="Open controls">⚙️</button>
   <aside id="drawer" class="drawer" aria-hidden="true">
     <div class="drawer-header">
