@@ -558,18 +558,49 @@ window.addEventListener("click", function enableBG() {
   window.addEventListener("DOMContentLoaded", init);
 })();
 
-// Simple Farcaster Frame Integration (like the video)
-const initFrame = () => {
-  try {
-    FarcasterFrameSdk.actions.ready();
-    console.log('Farcaster Frame ready');
-  } catch (error) {
-    console.log('Frame SDK not available');
+// Enhanced Farcaster & Base Mini App Integration
+const initMiniApp = () => {
+  // Base Mini App SDK
+  if (window.EmbedSDK) {
+    window.EmbedSDK.init();
+    console.log('Base Mini App SDK initialized');
+  }
+  
+  // Farcaster Frame Integration
+  if (window.FarcasterFrameSdk) {
+    try {
+      FarcasterFrameSdk.actions.ready();
+      console.log('Farcaster Frame ready');
+      
+      // Handle frame actions if needed
+      FarcasterFrameSdk.actions.on('action', (event) => {
+        console.log('Frame action received:', event);
+      });
+    } catch (error) {
+      console.log('Farcaster Frame SDK not available');
+    }
+  }
+  
+  // Warpcast specific detection
+  if (window.ethereum && window.ethereum.isMiniApp) {
+    console.log('Running in Warpcast Mini App');
   }
 };
 
 // Update the DOMContentLoaded event
 window.addEventListener("DOMContentLoaded", () => {
   init();
-  initFrame(); // Initialize Farcaster frame
+  initMiniApp();
 });
+
+// Handle mobile viewport for embedded apps
+if (window.self !== window.top) {
+  // We're in an iframe (embedded in Farcaster/Base)
+  document.body.classList.add('embedded');
+  
+  // Adjust viewport for embedded experience
+  const viewport = document.querySelector('meta[name="viewport"]');
+  if (viewport) {
+    viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');
+  }
+}
