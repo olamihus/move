@@ -1,0 +1,30 @@
+{
+  "accountAssociation": {
+    "header": "",
+    "payload": "",
+    "signature": ""
+  },
+  "baseBuilder": {
+    "ownerAddress": "0x5c4Cf0285984ACb2055a7a6c680860ad6EF7357E"
+  },
+  "miniapp": {
+    "version": "1",
+    "name": "Filler Quest",
+    "homeUrl": "https://new-1xsa.vercel.app/",
+    "iconUrl": "https://new-1xsa.vercel.app/color.png",
+    "splashImageUrl": "https://new-1xsa.vercel.app/color.png",
+    "splashBackgroundColor": "#000000",
+    "webhookUrl": "",
+    "subtitle": "Master the Art of Color Strategy",
+    "description": "A fun color-filling puzzle game.",
+    "screenshotUrls": [],
+    "primaryCategory": "game",
+    "tags": ["puzzle", "color", "miniapp", "baseapp"],
+    "heroImageUrl": "https://new-1xsa.vercel.app/color.png",
+    "tagline": "Play instantly",
+    "ogTitle": "Filler Quest",
+    "ogDescription": "Master the Art of Color Strategy",
+    "ogImageUrl": "https://new-1xsa.vercel.app/color.png",
+    "noindex": true
+  }
+}
