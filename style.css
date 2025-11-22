@@ -521,3 +521,23 @@ body.theme-dark .drawer-label {
     filter: brightness(1);
   }
 }
+/* Embedded app styles for Farcaster/Base */
+body.embedded {
+  background: transparent !important;
+}
+
+body.embedded .app {
+  margin: 0;
+  border-radius: 0;
+  min-height: 100vh;
+  width: 100vw;
+  box-shadow: none;
+}
+
+/* Ensure game works in embedded iframe */
+@media (max-width: 640px) {
+  body.embedded .app {
+    margin: 0;
+    border-radius: 0;
+  }
+}
