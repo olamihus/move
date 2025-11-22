@@ -1,0 +1,18 @@
+﻿{
+  "name": "Filler Quest",
+  "description": "Fill each board before the moves run out. A colorful puzzle game!",
+  "iconUrl": "https://raw.githubusercontent.com/olamihus/move/main/color.png",
+  "maintainer": {
+    "name": "olamihus",
+    "url": "https://github.com/olamihus"
+  },
+  "version": "1.0.0",
+  "permissions": [
+    "camera",
+    "microphone",
+    "storage"
+  ],
+  "supportedClients": ["base"],
+  "categories": ["games"],
+  "tags": ["puzzle", "color", "strategy"]
+}
