@@ -3,5 +3,31 @@
     "header": "eyJmaWQiOjEwNTk0MDYsInR5cGUiOiJjdXN0b2R5Iiwia2V5IjoiMHhkOUUzNThENjRkMzRmYWFhZjdiNUFlMzM5NmQyZmUzQWQwYjU1QUVFIn0",
     "payload": "eyJkb21haW4iOiJvbGFtaWh1cy52ZXJjZWwuYXBwIn0",
     "signature": "0Hc2TnSPg7Yb6j1zRl+DIJZPyPbAPuIJb2N5CmxFzGYPGZtQRhiqABoQt+JP9gAigQngkxt9S1qRfbeENJ80VBw="
+  },
+  "baseBuilder": {
+    "ownerAddress": "0x5c4Cf0285984ACb2055a7a6c680860ad6EF7357E"
+  },
+  "miniapp": {
+    "version": "1",
+    "name": "Filler Quest",
+    "description": "A fun color-filling puzzle game.",
+    "imageUrl": "https://raw.githubusercontent.com/olamihus/move/main/color.png",
+    "homeUrl": "https://olamihus.vercel.app/",
+    "iconUrl": "https://raw.githubusercontent.com/olamihus/move/main/color.png",
+    "splashImageUrl": "https://raw.githubusercontent.com/olamihus/move/main/color.png",
+    "splashBackgroundColor": "#000000",
+    "webhookUrl": "https://olamihus.vercel.app/api/webhook",
+    "subtitle": "Color puzzle strategy game",
+    "screenshotUrls": [
+      "https://raw.githubusercontent.com/olamihus/move/main/color.png"
+    ],
+    "primaryCategory": "games",
+    "tags": ["puzzle", "color", "miniapp", "baseapp"],
+    "heroImageUrl": "https://raw.githubusercontent.com/olamihus/move/main/color.png",
+    "tagline": "Play instantly",
+    "ogTitle": "Filler Quest",
+    "ogDescription": "Master the Art of Color Strategy",
+    "ogImageUrl": "https://raw.githubusercontent.com/olamihus/move/main/color.png",
+    "noindex": false
   }
 }
