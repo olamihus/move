@@ -1,10 +1,7 @@
 ﻿{
   "version": "1",
   "name": "Filler Quest",
-  "description": "Fill each board before the moves run out. A colorful puzzle game!",
+  "description": "Fill each board before the moves run out",
   "imageUrl": "https://raw.githubusercontent.com/olamihus/move/main/color.png",
-  "homeUrl": "https://olamihus.vercel.app/",
-  "frame": {
-    "url": "https://olamihus.vercel.app/"
-  }
+  "homeUrl": "https://olamihus.vercel.app/"
 }
