@@ -112,15 +112,20 @@
   <audio id="fillSound" src="https://cdn.jsdelivr.net/gh/itsrealfake/audio-snippets/pop-soft.mp3" preload="auto"></audio>
   <audio id="loseSound" src="https://cdn.jsdelivr.net/gh/itsrealfake/audio-snippets/error-tone.mp3" preload="auto"></audio>
 
-  <!-- Add Base SDK -->
+   <!-- Base Mini App SDK -->
   <script src="https://embed-sdk.base.org/embed-sdk.js"></script>
-  <script>
-    // Initialize Base Mini App SDK
-    if (window.EmbedSDK) {
-      window.EmbedSDK.init();
-    }
+  
+  <!-- Farcaster Mini App SDK - THIS HIDES THE SPLASH SCREEN -->
+  <script type="module">
+    import { sdk } from 'https://esm.sh/@farcaster/miniapp-sdk';
+    window.FarcasterMiniAppSDK = sdk;
+    
+    document.addEventListener('DOMContentLoaded', async () => {
+      await sdk.actions.ready();
+    });
   </script>
   
+  <!-- Your Game Script -->
   <script src="script.js"></script>
 </body>
 </html>
